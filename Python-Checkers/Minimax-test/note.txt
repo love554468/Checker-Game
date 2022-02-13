@@ -1,0 +1,36 @@
+Cây trò chơi và tìm kiếm trên cây trò chơi:
+
+- Giả thuyết:
++ Trạng thái ban đầu, kết thúc, toán tử, biểu diễn không 
+gian trạng thái trên cây trò chơi 
+
+- Xây dựng trò chơi:
++ Gốc : u
++ Ứng với mỗi trạng thái u có rất nhiều trạng thái con 
+
+- Nhận xét:
++ Độ cao của cây là tổng số nước đi 
++ Các nút lá ứng với trạg thái kết thúc
+=======================
+Giải thuật minimax
+
+Nhận định:
+Xét tại đỉnh u, đường đi tối ưu cho trạng thái u là đỉnh con
+v ( đỉnh con tốt nhất trong tất cả đỉnh con)
+=> Để chọn nước đi tốt nhất cần xác định giá trị các trạng
+thái con của đỉnh u
+
+Cách tính điểm cho các điểm:
+- đi từ mức thấp nhất cho đến đỉnh u, lớp min lấy giá trị
+nhỏ nhất các node, max lấy giá trị lớn nhất các node con  
+
+Đánh giá:
+- Trong việc tìm kiếm minimax dù cho giới hạn độ sâu thì 
+số đỉnh con của một đỉnh bất kì vẫn rất lớn
+- Cờ vua số nhanh trung bình 35 -> độ sâu 4 thì mất ít nhất 
+35^4 = 1,5*10^6 phép đánh giá 
+- Cần phương pháp giảm số nhánh
+
+Cắt tỉa alpha-beta
+
+Hàm sử dụng alpha beta là giá trị lớn nhất và nhỏ nhất trong các giá trị của đỉnh con đã được chọn 
